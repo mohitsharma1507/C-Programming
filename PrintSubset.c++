@@ -16,9 +16,9 @@ void getAllSubSet(vector<int> &nums, vector<int> &ans, vector<vector<int>> &allS
 
   ans.pop_back();
   int idx = i + 1;
-  while (idx < nums.size() && nums[i] == nums[i - 1])
+  while (idx < nums.size() && nums[idx] == nums[idx - 1])
   {
-    i++;
+    idx++;
   }
   getAllSubSet(nums, ans, allSubset, idx);
 };
